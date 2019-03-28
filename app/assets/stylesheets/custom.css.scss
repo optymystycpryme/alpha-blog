@@ -2,19 +2,28 @@ $primary-color: #666;
 $secondary-color: #6ce;
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Germania+One');
 
 /* Global */
+body {
+  background-image: asset-url("jumbo.jpg");
+}
 a {
   text-decoration: none;
 }
-
 .container {
   min-height: calc(100vh - 60px);
 }
-
+.form-container {
+  background: #fff;
+  padding: 1px 0 25px 0;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.4);
+  height: 80vh;
+}
 /* Header */
 .navbar-default {
-   background: #141e30;
+  background: #141e30;
   background: -webkit-linear-gradient(to left, #141e30, #243b55);
   background: linear-gradient(to left, #141e30, #243b55);
   border-radius: 0px !important;
@@ -42,11 +51,12 @@ a {
 
 #logo {
   float: left;
-  font-size: 1.7em;
+  font-size: 2.3em;
   color: #fff;
   text-transform: uppercase;
   letter-spacing: -1px;
   font-weight: bold;
+  font-family: 'Germania One', cursive;
   &:hover {
     color: $secondary-color;
     text-decoration: none;
@@ -60,24 +70,38 @@ a {
 
 .jumbotron {
   margin: 5rem auto;
-  background-image: asset-url("jumbo.jpg");
+  background-image: asset-url("img3.jpg");
   background-size: cover;
-  background-position: center;
-  height: 335px;
-  box-shadow: 0 4px 8px 4px rgba(102, 102, 102, 0.4);
+  background-position: top;
+  height: 400px;
+  box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.9);
+  h1 {
+    text-shadow: 3px 3px 10px #000;
+    font-size: 10em;
+  }
+  span {
+    font-family: 'Germania One', cursive;
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+  .span2 {
+    color: $primary-color;
+    &:hover {
+      color: $secondary-color;
+    }
+  }
   .jumbo-btn {
-    background: #000;
+    background: #111;
     color: #fff;
     border-style: outset;
     padding: 2rem;
     font-size: 2rem;
-    box-shadow: 6px 6px 8px #000;
-    transition: box-shadow 1s;
+    box-shadow: 0 2px 6px 2px #fff;
+    transition: box-shadow 0.7s;
     &:hover {
-      transform: scale(1.02);
-      box-shadow: -6px 6px 8px #000;
-      background: $secondary-color;
-      color: #000;
+      transform: scale(1.04);
+      box-shadow: 0 -2px 6px 2px #fff;
     }
   }
 }
