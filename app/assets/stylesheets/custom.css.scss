@@ -21,6 +21,12 @@ a {
 .btn {
   border-radius: 0;
 }
+.white-background {
+  background: #f2f2f2;
+  padding: 5px;
+  width: 100%;
+  min-height: 100%;
+}
 
 /* Header */
 .navbar-default {
@@ -142,6 +148,7 @@ a {
 
 /* Show Page */
 .show-container {
+  margin-top: 80px;
   background: #fff;
   padding: 1px 0 25px 0;
   border-radius: 5px;
