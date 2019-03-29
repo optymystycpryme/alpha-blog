@@ -6,29 +6,48 @@ $secondary-color: #6ce;
 
 /* Global */
 body {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   background-image: asset-url("jumbo.jpg");
   min-height: 100%;
 }
 .container {
+  padding-top: 100px;
   min-height: calc(100vh - 60px);
 }
 a {
   text-decoration: none;
 }
+.btn {
+  border-radius: 0;
+}
 
 /* Header */
 .navbar-default {
+  margin-top: 20px;
   background: #141e30;
   background: -webkit-linear-gradient(to left, #141e30, #243b55);
   background: linear-gradient(to left, #141e30, #243b55);
   border-radius: 0px !important;
   border: none;
-  box-shadow: 0 2px 8px 4px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 8px 4px rgba(0, 0, 0, 0.7);
+  height: 80px;
+  line-height: 60px;
 }
 .navbar li a{
+  line-height: 50px;
   color: #fff !important;
   &:hover {
     color: $secondary-color !important;
+  }
+}
+.navbar-form {
+  input {
+    border-radius: 0;
+  }
+  .btn {
+  margin-top: 2px;
+  padding: 7px;
   }
 }
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
@@ -43,10 +62,18 @@ a {
     color: $primary-color !important;
   }
 }
+.navbar-toggle {
+  background-color: $secondary-color !important;
+  margin-top: 22px;
+}
+#bs-example-navbar-collapse-1 {
+  background: linear-gradient(to left, #141e30, #243b55);
+}
 
 #logo {
   float: left;
-  font-size: 2.3em;
+  font-size: 3em;
+  line-height: 50px;
   color: #fff;
   text-transform: uppercase;
   letter-spacing: -1px;
@@ -89,6 +116,7 @@ a {
   }
   .jumbo-btn {
     background: #111;
+    border-radius: 0;
     color: #fff;
     border-style: outset;
     padding: 2rem;
@@ -123,7 +151,7 @@ a {
   margin-top: 0;
 }
 .article-actions {
-  border-top: 1px solid $primary-color;
+  border-top: 1px solid #aaa;
   padding-top: 5px;
 }
 
@@ -133,17 +161,25 @@ a {
   font-size: 1.5em;
 }
 .article-body {
-  border-top: 1px solid $primary-color;
+  border-top: 1px solid #aaa;
   padding-top: 15px;
   padding-bottom: 15px;
 }
+.article-meta-details {
+  border-top: 1px solid #aaa;
+  margin-top: 15px;
+  small p {
+    margin-bottom: -12px;
+  }
+}
+
 /* Footer */
 footer {
   width: 100%;
   margin-top: 45px;
   padding-top: 5px;
   border-top: 1px solid $primary-color;
-  color: $primary-color;
+  color: #141e30;
   height: 60px;
   line-height: 50px;
   text-align: center;
@@ -153,7 +189,7 @@ footer {
       display: inline;
       padding-right: 50px;
       a {
-        color: $primary-color;
+        color: #141e30;
         &:hover{
           text-decoration: none;
           color: $secondary-color
