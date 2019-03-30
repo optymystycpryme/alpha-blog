@@ -21,12 +21,6 @@ a {
 .btn {
   border-radius: 0;
 }
-.white-background {
-  background: #f2f2f2;
-  padding: 5px;
-  width: 100%;
-  min-height: 100%;
-}
 
 /* Header */
 .navbar-default {
@@ -91,7 +85,13 @@ a {
   }
 }
 
-/* Home Pge */
+/* Errors Messages */
+.error-messages {
+  margin-top: 3em;
+  margin-bottom: -2em;
+}
+
+/* Home Page */
 .center {
   text-align: center;
 }
@@ -164,6 +164,9 @@ a {
 }
 
 /* Articles Page */
+.article-index {
+  margin-bottom: -25px;
+}
 .article-title {
   font-weight: bold;
   font-size: 1.5em;
@@ -185,6 +188,48 @@ a {
 .listing {
   list-style: none;
   padding-left: 0;
+}
+
+/* Pagination */
+.pagination {
+  color: $secondary-color;
+  .prev {
+    a {
+      background: linear-gradient(to right, #141e30, #243b55);
+      color: $secondary-color;
+      &:hover {
+        background: linear-gradient(to right, #141e30, #243b55);
+        color: #fff;
+      }
+    }
+  }
+  .active {
+    a {
+      background: #fff;
+      color: #141e30;
+      &:hover {
+        background: $secondary-color;
+      }
+    }
+  }
+  .next_page {
+    a {
+      background: linear-gradient(to left, #141e30, #243b55);
+      color: $secondary-color;
+      &:hover {
+        color: #fff;
+        background: linear-gradient(to left, #141e30, #243b55);
+      }
+    }
+  }
+}
+.pagination > li > a {
+  background: #243b55;
+  color: $secondary-color;
+  &:hover {
+    color: #fff;
+    background: #243b55;
+  }
 }
 
 /* Footer */
