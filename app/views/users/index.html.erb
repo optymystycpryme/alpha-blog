@@ -6,7 +6,14 @@
       <div class="well col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
         <li><%= link_to  gravatar_for(user), user_path(user) %></li>
         <li class="article-title"><%= link_to  user.username, user_path(user) %></li>
-        <li><small><%= pluralize(user.articles.count, "article") if user.articles %></small></li>
+        <li>
+          <small><%= pluralize(user.articles.count, "article") if user.articles %></small>
+        </li>
+        <% if logged_in? && current_user.admin? %>
+          <li>
+            <%= link_to  "Delete this user", user_path(user), method: :delete, data: { confirm: "Are you sure you want to delete the user and all there articles?"}, class: "btn btn-sm btn-danger" %>
+          </li>
+        <% end %>
       </div>
     </div>
   </ul>
