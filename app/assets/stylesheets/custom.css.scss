@@ -163,6 +163,27 @@ a {
   padding-top: 5px;
 }
 
+.badge {
+  background: linear-gradient(to right, #141e30, #243b55);
+  padding: 4px;
+  padding-left: 6px;
+  margin: 0 1px;
+  border-radius: 0;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+  a {
+    color: #fff !important;
+    text-align: center;
+    &:hover {
+      color: $secondary-color !important;
+    }
+  }
+}
+.input-checkbox {
+  width: auto !important;
+}
+
 /* Articles Page */
 .article-index {
   margin-bottom: -25px;
