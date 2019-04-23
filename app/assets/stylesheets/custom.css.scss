@@ -135,6 +135,15 @@ a {
     }
   }
 }
+.home-title span {
+  font-size: 12vw;
+}
+
+@media (max-width: 600px) {
+  .home-title span {
+    font-size: 15vw;
+  }
+}
 
 /* Form Pages */
 .form-container {
