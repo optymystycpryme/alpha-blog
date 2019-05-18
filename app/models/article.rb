@@ -15,4 +15,8 @@ class Article < ActiveRecord::Base
             }
   validates :user_id,
             presence: true
+
+  def author
+    user.username
+  end
 end

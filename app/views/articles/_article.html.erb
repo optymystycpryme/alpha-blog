@@ -3,11 +3,11 @@
   <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
     <div class="well well-lg">
       <small><em><%= article.created_at.strftime("%A, %B %d, %Y") %></em></small>
-      <%= react_component("Article", { title: article.title,
+      <%= react_component("Article", { title:       article.title,
                                        description: truncate(article.description, length: 100),
-                                       path: article_path(article),
-                                       author: article.user.username,
-                                       updated_at: article.updated_at
+                                       path:        article_path(article),
+                                       author:      article.author,
+                                       updated_at:  article.updated_at
                                       })
       %>
       <% if article.categories.any? %>
