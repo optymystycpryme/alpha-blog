@@ -1,11 +1,12 @@
 import React from "react"
 import PropTypes from "prop-types"
-import distanceInWordsToNow from "date-fns/distance_in_words_to_now";
+import { distanceInWordsToNow } from "date-fns";
 class Article extends React.Component {
   render () {
-    const updatedAt = distanceInWordsToNow(
+    let updatedAt = distanceInWordsToNow(
       new Date(this.props.updated_at)
-    )
+    );
+
     return (
       <React.Fragment>
         <div className="article-title">
@@ -24,6 +25,11 @@ class Article extends React.Component {
         </div>
       </React.Fragment>
     );
+  }
+
+  componentDidMount() {
+    let self = this;
+    setInterval(function() { self.forceUpdate() }, 1000);
   }
 }
 
