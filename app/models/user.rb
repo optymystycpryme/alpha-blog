@@ -22,5 +22,10 @@ class User < ApplicationRecord
             },
             format: { with: VALID_EMAIL_REGEX }
 
+  VALID_HEX_COLOR_REGEX = /\A#[a-fA-F0-9]{3}\z|#[a-fA-F0-9]{6}\z/i
+  validates :color,
+            presence: true,
+            format: { with: VALID_HEX_COLOR_REGEX }
+
   has_secure_password
 end
